@@ -28,8 +28,6 @@ jobs:
         run: |
           $repoUrls = "${{ github.event.inputs.repositories }}" -split ','
           $artifactPaths = @()
-
-		  # --- Foreach Repository ---
           foreach ($repoUrl in $repoUrls) {
             # Extract repository name
             $repoName = $repoUrl.Split('/')[-1]
