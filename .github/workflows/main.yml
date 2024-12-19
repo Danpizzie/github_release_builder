@@ -29,7 +29,6 @@ jobs:
           $repoUrls = "${{ github.event.inputs.repositories }}" -split ','
           $artifactPaths = @()
           foreach ($repoUrl in $repoUrls) {
-            # Extract repository name
             $repoName = $repoUrl.Split('/')[-1]
             Write-Host "Processing repository: $repoName"
 
